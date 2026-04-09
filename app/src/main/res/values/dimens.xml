@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_text_size">22sp</dimen>
+    <dimen name="master_padding">22dp</dimen>
+    <dimen name="string_text_size">16sp</dimen>
+    <dimen name="button_corner_radius">16dp</dimen>
+    <dimen name="screen_side_margin">16dp</dimen>
+    <dimen name="settings_item_height">48dp</dimen>
+    <dimen name="settings_item_spacing">42dp</dimen>
+    <dimen name="settings_top_margin">61dp</dimen>
+
+</resources>
