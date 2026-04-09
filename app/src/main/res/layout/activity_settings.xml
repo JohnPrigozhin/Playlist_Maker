@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/arrowback"
-            app:tint="@color/YP_black" />
+            app:tint="@color/YP_black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
             android:text="@string/settings"
             android:textColor="@color/YP_black"
             android:textSize="@dimen/title_text_size"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
     </LinearLayout>
 
 
@@ -43,7 +43,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/settings_item_height"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
@@ -53,21 +53,21 @@
                 android:layout_weight="1"
                 android:text="@string/theme"
                 android:textColor="@color/YP_black"
-                android:textSize="@dimen/string_text_size" />
+                android:textSize="@dimen/string_text_size"/>
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/dark_mode_switch"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/settings_item_height"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="42dp">
+            android:layout_marginTop="@dimen/settings_item_spacing">
 
             <TextView
                 android:layout_width="0dp"
@@ -75,7 +75,7 @@
                 android:layout_weight="1"
                 android:text="@string/share"
                 android:textColor="@color/YP_black"
-                android:textSize="@dimen/string_text_size" />
+                android:textSize="@dimen/string_text_size"/>
 
             <FrameLayout
                 android:layout_width="24dp"
@@ -85,17 +85,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:src="@drawable/share"
-                    app:tint="@color/YP_gray" />
+                    app:tint="@color/YP_gray"/>
             </FrameLayout>
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/settings_item_height"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="42dp">
+            android:layout_marginTop="@dimen/settings_item_spacing">
 
             <TextView
                 android:layout_width="0dp"
@@ -103,7 +103,7 @@
                 android:layout_weight="1"
                 android:text="@string/support"
                 android:textColor="@color/YP_black"
-                android:textSize="@dimen/string_text_size" />
+                android:textSize="@dimen/string_text_size"/>
 
             <FrameLayout
                 android:layout_width="24dp"
@@ -113,17 +113,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:src="@drawable/support"
-                    app:tint="@color/YP_gray" />
+                    app:tint="@color/YP_gray"/>
             </FrameLayout>
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/settings_item_height"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="42dp">
+            android:layout_marginTop="@dimen/settings_item_spacing">
 
             <TextView
                 android:layout_width="0dp"
@@ -131,7 +131,7 @@
                 android:layout_weight="1"
                 android:text="@string/usserag"
                 android:textColor="@color/YP_black"
-                android:textSize="@dimen/string_text_size" />
+                android:textSize="@dimen/string_text_size"/>
 
             <FrameLayout
                 android:layout_width="24dp"
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:src="@drawable/arrowforward"
-                    app:tint="@color/YP_gray" />
+                    app:tint="@color/YP_gray"/>
             </FrameLayout>
         </LinearLayout>
 
