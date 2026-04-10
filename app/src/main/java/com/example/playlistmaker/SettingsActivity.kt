@@ -5,7 +5,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-
 class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +26,7 @@ class SettingsActivity : AppCompatActivity() {
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.type = "text/plain"
             shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_text))
-            startActivity(Intent.createChooser(shareIntent, "Поделиться через"))
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.share_intent)))
         }
 
         // Поддержка

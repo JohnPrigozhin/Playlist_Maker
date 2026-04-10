@@ -8,6 +8,7 @@
     <string name="share">Поделиться приложением</string>
     <string name="support">Написать в поддержку</string>
     <string name="usserag" translatable="false">Пользовательское соглашение</string>
+    <string name="share_intent">Поделиться через</string>
 
 
     <string name="title_activity_search">SearchActivity</string>
