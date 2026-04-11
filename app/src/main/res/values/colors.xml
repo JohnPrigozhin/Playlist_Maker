@@ -25,6 +25,7 @@
     <color name="back_arrow">@color/YP_black</color>
     <color name="search_text">@color/YP_gray</color>
     <color name="search_bar">@color/YP_light_gray</color>
+    <color name="clear_button">@color/YP_gray</color>
 
     <color name="button_bg">@color/YP_white</color>
     <color name="button_text">@color/YP_black</color>

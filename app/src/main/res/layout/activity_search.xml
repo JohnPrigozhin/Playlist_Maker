@@ -59,14 +59,17 @@
             android:focusableInTouchMode="true"
             android:clickable="true"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/clear_button"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:layout_gravity="center_vertical|end"
             android:layout_marginEnd="12dp"
             android:src="@drawable/close"
             android:visibility="gone"
-            app:tint="@color/YP_gray"/>
+            android:tint="@color/clear_button"
+            android:tintMode="src_in"
+            android:scaleType="center"/>
     </FrameLayout>
 </LinearLayout>

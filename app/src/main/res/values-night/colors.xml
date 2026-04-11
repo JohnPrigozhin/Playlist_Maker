@@ -12,5 +12,6 @@
     <color name="accent">@color/YP_black</color>
     <color name="search_text">@color/YP_black</color>
     <color name="search_bar">@color/YP_white</color>
+    <color name="clear_button">@color/YP_black</color>
 
 </resources>
