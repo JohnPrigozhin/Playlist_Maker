@@ -3,11 +3,9 @@
     <color name="background">@color/YP_black</color>
     <color name="text_primary">@color/YP_dark_text_primary</color>
     <color name="text_secondary">@color/YP_white</color>
-
     <color name="button_bg">@color/YP_white</color>
     <color name="button_text">@color/YP_black</color>
     <color name="back_arrow">@color/YP_white</color>
-
     <color name="icon_primary">@color/YP_black</color>
     <color name="accent">@color/YP_black</color>
     <color name="search_text">@color/YP_black</color>

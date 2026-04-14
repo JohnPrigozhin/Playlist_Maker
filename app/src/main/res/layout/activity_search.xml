@@ -72,4 +72,13 @@
             android:tintMode="src_in"
             android:scaleType="center"/>
     </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp"
+        android:paddingTop="8dp"
+        android:clipToPadding="false" />
 </LinearLayout>

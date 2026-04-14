@@ -19,6 +19,7 @@
     <color name="YP_dark_text_primary">#FFFFFF</color>
     <color name="YP_light_gray">#E6E8EB</color>
 
+    <!-- WIP + Reused -->
     <color name="background">@color/YP_white</color>
     <color name="text_primary">@color/YP_black</color>
     <color name="text_secondary">@color/YP_gray</color>
@@ -26,10 +27,8 @@
     <color name="search_text">@color/YP_gray</color>
     <color name="search_bar">@color/YP_light_gray</color>
     <color name="clear_button">@color/YP_gray</color>
-
     <color name="button_bg">@color/YP_white</color>
     <color name="button_text">@color/YP_black</color>
-
     <color name="icon_primary">@color/YP_black</color>
     <color name="accent">@color/YP_blue</color>
 </resources>
