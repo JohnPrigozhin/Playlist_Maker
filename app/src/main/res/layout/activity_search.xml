@@ -40,10 +40,11 @@
         <EditText
             android:id="@+id/search_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="36dp"
             android:background="@drawable/search_field"
             android:drawableStart="@drawable/search_small"
             android:drawablePadding="12dp"
+            android:drawableTint="@color/clear_button"
             android:fontFamily="@font/ys_display_regular"
             android:hint="@string/search"
             android:imeOptions="actionSearch"
@@ -57,10 +58,12 @@
 
         <ImageButton
             android:id="@+id/clear_button"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
             android:layout_gravity="center_vertical|end"
             android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="6dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/close"
             android:visibility="gone"
