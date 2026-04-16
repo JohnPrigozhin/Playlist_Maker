@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
@@ -10,6 +9,7 @@
     android:paddingEnd="20dp"
     android:paddingTop="20dp">
 
+    <!-- Заголовок с кнопкой назад -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,8 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/arrowback"
-            android:tint="@color/back_arrow"
-            tools:ignore="UseAppTint" />
+            android:tint="@color/back_arrow"/>
 
         <TextView
             style="@style/PlaylistMakerScreenTitle"
@@ -32,10 +31,10 @@
             android:text="@string/search"/>
     </LinearLayout>
 
-
+    <!-- Поле поиска -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="48dp"
         android:layout_marginTop="24dp">
 
         <EditText
@@ -44,8 +43,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/search_field"
             android:drawableStart="@drawable/search_small"
-            android:drawableTint="@color/search_text"
-            android:drawablePadding="8dp"
+            android:drawablePadding="12dp"
             android:fontFamily="@font/ys_display_regular"
             android:hint="@string/search"
             android:imeOptions="actionSearch"
@@ -55,30 +53,109 @@
             android:paddingEnd="40dp"
             android:textColor="@color/YP_black"
             android:textColorHint="@color/search_text"
-            android:textSize="16sp"
-            android:focusableInTouchMode="true"
-            android:clickable="true"/>
+            android:textSize="16sp"/>
 
         <ImageButton
             android:id="@+id/clear_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_gravity="center_vertical|end"
             android:layout_marginEnd="12dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/close"
             android:visibility="gone"
             android:tint="@color/clear_button"
-            android:tintMode="src_in"
-            android:scaleType="center"/>
+            android:tintMode="src_in"/>
     </FrameLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <!-- Контейнер для списка и плейсхолдеров -->
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="24dp"
-        android:paddingTop="8dp"
-        android:clipToPadding="false" />
+        android:layout_weight="1">
+
+        <!-- Список треков -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"/>
+
+        <!-- Плейсхолдер "Ничего не нашлось" -->
+        <LinearLayout
+            android:id="@+id/placeholder_nothing_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="110dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/placeholder_nothing_found"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/error_not_found"
+                android:textColor="@color/text_primary"
+                android:textSize="19sp"
+                android:fontFamily="@font/ys_display_medium"/>
+        </LinearLayout>
+
+        <!-- Плейсхолдер "Ошибка сервера" -->
+        <LinearLayout
+            android:id="@+id/placeholder_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="110dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/placeholder_error"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/error_no_internet1"
+                android:textColor="@color/text_primary"
+                android:textSize="19sp"
+                android:fontFamily="@font/ys_display_medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/error_no_internet2"
+                android:textColor="@color/text_primary"
+                android:textSize="19sp"
+                android:fontFamily="@font/ys_display_medium"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/refresh_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="12dp"
+                android:text="Обновить"
+                android:textColor="@color/refresh_button_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/ys_display_medium"
+                android:background="@drawable/refresh_button_background"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
 </LinearLayout>

@@ -31,4 +31,6 @@
     <color name="button_text">@color/YP_black</color>
     <color name="icon_primary">@color/YP_black</color>
     <color name="accent">@color/YP_blue</color>
+    <color name="refresh_button_bg">@color/YP_black</color>
+    <color name="refresh_button_text">@color/YP_white</color>
 </resources>
