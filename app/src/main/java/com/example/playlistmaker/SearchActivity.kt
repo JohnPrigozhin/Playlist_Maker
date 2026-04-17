@@ -99,44 +99,44 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun performSearch(query: String) {
-        Log.d("SearchActivity", "=== performSearch started with: $query ===")
         hideKeyboard()
 
         RetrofitClient.itunesService.search(query).enqueue(object : Callback<TrackResponse> {
             override fun onResponse(call: Call<TrackResponse>, response: Response<TrackResponse>) {
-                Log.d("SearchActivity", "onResponse: code = ${response.code()}, successful = ${response.isSuccessful}")
 
-                if (response.isSuccessful && response.body() != null) {
-                    val result = response.body()!!
-                    Log.d("SearchActivity", "Result count: ${result.resultCount}")
+                if (response.isSuccessful) {
+                    val result = response.body()
 
-                    tracks.clear()
-                    tracks.addAll(result.results.map { dto ->
-                        Track(
-                            trackName = dto.trackName,
-                            artistName = dto.artistName,
-                            trackTime = formatTrackTime(dto.trackTimeMillis),
-                            artworkUrl100 = dto.artworkUrl100
-                        )
-                    })
+                    if (result != null) {
+                        tracks.clear()
 
-                    adapter.notifyDataSetChanged()
+                        val receivedTracks = result.results ?: emptyList()
 
-                    if (tracks.isEmpty()) {
-                        Log.d("SearchActivity", "→ Showing Nothing Found")
-                        showNothingFound()
+                        tracks.addAll(receivedTracks.map { dto ->
+                            Track(
+                                trackName = dto.trackName ?: "",
+                                artistName = dto.artistName ?: "",
+                                trackTime = formatTrackTime(dto.trackTimeMillis ?: 0),
+                                artworkUrl100 = dto.artworkUrl100 ?: ""
+                            )
+                        })
+
+                        adapter.notifyDataSetChanged()
+
+                        if (tracks.isEmpty()) {
+                            showNothingFound()
+                        } else {
+                            showResults()
+                        }
                     } else {
-                        Log.d("SearchActivity", "→ Showing Results")
-                        showResults()
+                        showNothingFound()
                     }
                 } else {
-                    Log.d("SearchActivity", "→ Showing Error (not successful)")
                     showError()
                 }
             }
 
             override fun onFailure(call: Call<TrackResponse>, t: Throwable) {
-                Log.d("SearchActivity", "onFailure: ${t.message}")
                 showError()
             }
         })
